@@ -1,0 +1,75 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/auth-service1
+    username: phoneshop_night
+    password: phoneshop123
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+   change-log: classpath:db/changelog/db.changelog-master.yaml
+   enabled: true
+server:
+ servlet:
+  context-path: /api/v1
+
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#    publisher-confirm-type: correlated
+#    publisher-returns: true
+#    virtual-host: /      # Number of concurrent consumers per queue
+#    listener:
+#      simple:
+#        dead-letter-exchange: "dlx-exchange"
+#        dead-letter-routing-key: "dlx-routing-key"
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: doemmakarask@gmail.com
+#    password: eqrk umlg omuz tdrg
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#          connectiontimeout: 5000
+#          timeout: 3000
+#          writetimeout: 5000
+#
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#
+#  liquibase:
+#        change-log: classpath:db/changelog/db.changelog-master.yaml
+#        enabled: true
+#server:
+#  servlet:
+#    context-path: /api/v1
+app:
+  jwtSecret: $=====================JAN-CODES-DOEM-MAKARA-JAN-CODE==========================$
+  jwtExpirationMs: 86400000
+  basePath: /Users/_jan_codes_/Desktop/spring_boot_img/images/
+
+#upload:
+#  dir: src/main/resources/static/images/
+#
+## application.properties
+## rabbitmq
+#rabbitmq:
+#  exchanges:
+#    internal: internal.exchange # create a new topic exchange name
+#  queues:
+#    notification: notification.queue # create a new queue name
+#  routing-keys:
+#    internal-notification: internal.notification.routing-key # create a new name of exchange and queue (binding)
+#
+#
+#
